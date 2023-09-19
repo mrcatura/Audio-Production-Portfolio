@@ -1,0 +1,18 @@
+
+{% if app.environment == 'dev' %}
+    <script src="{{ asset('assets/js/quill.min.js') }}"></script>
+    <script src="//localhost:35729/livereload.js"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    {# load BS first to prevent icons in jquery ui from going missing #}
+    <script src="{{ asset('assets/js/popper.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.dataTables.js') }}"></script>
+    <script src="{{ asset('assets/js/dataTables.bootstrap4.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.timepicker.js') }}"></script>
+    <script src="{{ asset('assets/js/Chart.min.js') }}"></script>
+    <script src="{{ asset('assets/js/facet.core.js') }}"></script>
+    <script src="{{ asset('assets/js/facet.core.backend.js') }}"></script>
+{% else %}
+    <script src="{{ asset('assets/js/facet.core.js.min.js') }}"></script>
+{% endif %}

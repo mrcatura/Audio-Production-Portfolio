@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <title>{% block title %}Welcome to Facet!{% endblock %}</title>
+
+    {% include ':base:css.html.twig' %}
+</head>
+<body>
+
+    <header>
+        {% include ':core/frontend:mainNavagation.html.twig' %}
+    </header>
+
+    <main class="container-fluid">
+        {# block BODY will be overwritten when a view is called in #}
+        {% block body %}{% endblock %}
+    </main>
+
+    <footer>
+        <div id="facet-footer-javascript">
+            {% include ':base:js.html.twig' %}
+            {% block javascript %}
+            {% endblock %}
+        </div>
+    </footer>
+</body>
+</html>

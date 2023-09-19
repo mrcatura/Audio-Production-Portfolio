@@ -1,0 +1,16 @@
+/* Jewelry Television Customer Care Hub Redesign */
+
+Project Facet
+
+- Agents suggestions:
+    I went around the customer care lobby where agents take phone calls to intervue them at random. They've given me information on all the issues they had on the hub. However, most of the issues were beyond my skill set: internal network problems. Although, two agents gave tons of useful recommendations that helped give new ideas on a redesign. When I was first introduced to the customer care hub the first issue was already visible. It had a vertical navigation system. Tabs were hard to disingquish from one another due to no hoverable alteration in the color. The biggest flaw about it was the scrolling which made it more difficult to find what they needed. Even though a horizontal navigation system would offer less scrolling it still needed something else to create less searching for agents due its extreme size. A bookmarking system was a widely suggested feature to be added. Other agents were fine with what they had already. At that point, I began to experiment and create the new design for Project Facet. 
+
+- Goals: 
+    1. Create a more user friendly environment for employees usage.
+        - Readability: Biggest issue
+        - Navigation: Vertical scrolling system makes it impossible to find needed content
+        - Seperation of content: Content often appears compiled and the same color as the header/title
+        
+    2. Offer users an ultimately easier way to navigate content needed: 
+        - Horizontal navigation layout, bookmark system, and table of contents page.
+        

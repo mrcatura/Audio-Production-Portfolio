@@ -1,0 +1,13 @@
+{# if we are in development we do not load in the minified source file. #}
+{% if app.environment == 'dev' %}
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/jquery-ui.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/dataTables.bootstrap4.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/font-awesome.min.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/facet.core.css') }}" rel="stylesheet"/>
+    <link href="{{ asset('assets/css/quill.snow.css') }}" rel="stylesheet"/>
+    <script src="http://localhost:35729/livereload.js"></script>
+{% else %}
+    <link href="{{ asset('assets/css/customer-care-hub.min.css') }}" rel="stylesheet"/>
+{% endif %}
+

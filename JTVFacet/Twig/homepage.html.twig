@@ -1,0 +1,314 @@
+{% extends ':core/frontend:base.html.twig' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="alert alert-danger"><i class="fa fa-exclamation-triangle"></i> Alert! Example system alert!</div>
+        </div>
+    </div>
+
+    <div class="row">
+        {# left col #}
+        <div class="col-lg-3">
+            <div class="card mb-3">
+                <div class="card-header"><i class="fa fa-bookmark"></i> My Bookmarks</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><a class="float-left" href="#">People Operations</a> <a class="float-right text-danger" href="#"><i class="fa fa-trash"></i></a> </li>
+                    <li class="list-group-item"><a class="float-left" href="#">Stats</a> <a class="float-right text-danger" href="#"><i class="fa fa-trash"></i></a> </li>
+                    <li class="list-group-item"><a class="float-left" href="#">Call Quality Assurance</a> <a class="float-right text-danger" href="#"><i class="fa fa-trash"></i></a> </li>
+                    <li class="list-group-item"><a class="float-left" href="#">Phone Logs</a> <a class="float-right text-danger" href="#"><i class="fa fa-trash"></i></a> </li>
+                </ul>
+                <div class="card-body">
+                    <a href="#" class="btn btn-success btn-block" type="button"><i class="fa fa-plus"></i> Add Bookmark</a>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header">
+                    <ul class="nav nav-tabs card-header-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-item nav-link active" id="schedule-day-tab" data-toggle="tab" href="#schedule-day" role="tab"><i class="fa fa-calendar-check-o"></i> Today's Schedule</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-item nav-link" id="schedule-week-tab" data-toggle="tab" href="#schedule-week" role="tab"><i class="fa fa-calendar-minus-o"></i> Next 7 days</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-body p-0 tab-content">
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="schedule-day" role="tabpanel">
+                            <table  class="table table-sm border-0">
+                                {# only the first th/td need the border-0 #}
+                                <tr>
+                                    <th class="border-0">In</th>
+                                    <td class="border-0">8:00 am</td>
+                                </tr>
+                                <tr>
+                                    <th>Break</th>
+                                    <td>10:00 am</td>
+                                </tr>
+                                <tr>
+                                    <th>Lunch</th>
+                                    <td>12:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <th>Break</th>
+                                    <td>2:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <th>Out</th>
+                                    <td>4:00 pm</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="schedule-week" role="tabpanel">
+                            <table class="table table-sm border-0">
+                                {# only the first th/td need the border-0 #}
+                                <tr>
+                                    <th class="border-0">01/02/2017</th>
+                                    <td class="border-0">8:00 am &mdash; 4:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <th>01/03/2017</th>
+                                    <td>8:00 am &mdash; 4:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <th>01/04/2017</th>
+                                    <td>Off</td>
+                                </tr>
+                                <tr>
+                                    <th>01/05/2017</th>
+                                    <td>8:00 am &mdash; 4:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <th>01/06/2017</th>
+                                    <td>Off</td>
+                                </tr>
+                                <tr>
+                                    <th>01/07/2017</th>
+                                    <td>8:00 am &mdash; 4:00 pm</td>
+                                </tr>
+                                <tr>
+                                    <th>01/08/2017</th>
+                                    <td>8:00 am &mdash; 4:00 pm</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card border-secondary">
+                    <div class="card-body text-secondary">
+                        <h4 class="card-title">Empty Module</h4>
+                        <p class="card-text">This is an empty module slot.</p>
+                        <a href="#" class="btn btn-outline-success"><i class="fa fa-plus"></i> Add Module</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card">
+                    <div class="card-header mb-3">
+                        <form class="form-inline">
+                            <label for="personal-numbers" class="mr-2"><i class="fa fa-line-chart"></i>&nbsp;My</label>
+                            <select id="personal-numbers" class="custom-select form-control ">
+                                <option>Stats</option>
+                                <option>Phone Logs</option>
+                            </select>
+                        </form>
+                    </div>
+                    <canvas id="example-chart"></canvas>
+                </div>
+            </div>
+        </div>
+        {# end left column #}
+
+        {# Main section #}
+        <div class="col-lg-6 news-main">
+            <a href="#" type="button" class="btn btn-success btn-block"><i class="fa fa-pencil"></i> Create News Post</a>
+            <div class="blog-post">
+                <h2 class="news-post-title">Sample news post</h2>
+                <p class="news-post-meta">January 1, 2014 by <a href="#">Mark</a> &mdash; Customer Care</p>
+                <hr/>
+                <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                <blockquote>
+                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </blockquote>
+                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <h2>Heading</h2>
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+                <h3>Sub-heading</h3>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+                <pre><code>Example code block</code></pre>
+                <p>Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.</p>
+                <h3>Sub-heading</h3>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                </ul>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+                <ol>
+                    <li>Vestibulum id ligula porta felis euismod semper.</li>
+                    <li>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</li>
+                    <li>Maecenas sed diam eget risus varius blandit sit amet non magna.</li>
+                </ol>
+                <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+            </div>
+
+            <div class="news-post">
+                <h2 class="news-post-title">Another news post</h2>
+                <p class="news-post-meta">December 23, 2013 by <a href="#">Jacob</a> &mdash; Customer Care</p>
+                <hr/>
+                <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+                <blockquote>
+                    <p>Curabitur blandit tempus porttitor. <strong>Nullam quis risus eget urna mollis</strong> ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                </blockquote>
+                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            </div>
+
+            <div class="news-post">
+                <h2 class="news-post-title">New feature</h2>
+                <p class="news-post-meta">December 14, 2013 by <a href="#">Chris</a> &mdash; Customer Care</p>
+                <hr/>
+                <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                <ul>
+                    <li>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                </ul>
+                <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+                <p>Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.</p>
+            </div>
+
+            <nav class="news-pagination">
+                <a class="btn btn-outline-primary" href="#">Older</a>
+                <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+            </nav>
+
+        </div>
+        {# end Main #}
+
+        {# right col #}
+        <div class="col-lg-3">
+            <div class="card mb-3">
+                <div class="card-header"><i class="fa fa-television"></i> Current Show <a href="#" type="button" class="btn btn-dark btn-sm float-right">Update</a></div>
+                <table class="table table-sm">
+                    <tr>
+                        <th>Show</th>
+                        <td>Sparkle in Sliver Gifts</td>
+                    </tr>
+                    <tr>
+                        <th>Runtime</th>
+                        <td>4:00 pm &mdash; 6:00 pm</td>
+                    </tr>
+                    <tr>
+                        <th>Shipping</th>
+                        <td>Not entered.</td>
+                    </tr>
+                    <tr>
+                        <th>Show Info</th>
+                        <td>Not entered.</td>
+                    </tr>
+                    <tr>
+                        <th>Show Plan</th>
+                        <td>Not entered.</td>
+                    </tr>
+                    <tr>
+                        <th>Host Jewelry</th>
+                        <td>Not entered.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header"><i class="fa fa-television"></i> Next Show <a href="#" type="button" class="btn btn-dark btn-sm float-right">Update</a></div>
+                <table class="table table-sm">
+                    <tr>
+                        <th>Show</th>
+                        <td>Diamond Elegance Gifts</td>
+                    </tr>
+                    <tr>
+                        <th>Runtime</th>
+                        <td>4:00 pm &mdash; 6:00 pm</td>
+                    </tr>
+                    <tr>
+                        <th>Shipping</th>
+                        <td>Not entered.</td>
+                    </tr>
+                    <tr>
+                        <th>Show Info</th>
+                        <td>Not entered.</td>
+                    </tr>
+                    <tr>
+                        <th>Show Plan</th>
+                        <td>Not entered.</td>
+                    </tr>
+                    <tr>
+                        <th>Host Jewelry</th>
+                        <td>Not entered.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card-header"><i class="fa fa-wrench"></i> Site Updates</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">chrgoo1 - updated - Gemstones</li>
+                    <li class="list-group-item">jonrol1 - updated - News</li>
+                    <li class="list-group-item">chrgoo1 - updated - Roles</li>
+                    <li class="list-group-item">amygof1 - removed - Test Page</li>
+                </ul>
+            </div>
+
+            <div class="card mb-3">
+                <div class="card border-secondary">
+                    <div class="card-body text-secondary">
+                        <h4 class="card-title">Empty Module</h4>
+                        <p class="card-text">This is an empty module slot.</p>
+                        <a href="#" class="btn btn-outline-success"><i class="fa fa-plus"></i> Add Module</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        {# end right column #}
+    </div>
+{% endblock %}
+
+{% block javascript %}
+<script>
+    var ctx = $("#example-chart");
+
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Calls", "Xfers", "Orders", "Carts"],
+            datasets: [{
+                label: '# of Votes',
+                data: [132, 10, 100, 43],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options:{
+            legend: { display: false }
+        }
+    });
+</script>
+{% endblock %}
