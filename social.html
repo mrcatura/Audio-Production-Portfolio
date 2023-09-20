@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Melody Catura, Charlie Catura, Portfolio, Audio Production Engineering, Audio Production, Audio, Music">
+    <meta name="author" content="Melody Catura">
+    <meta name="description" content="This portfolio was created to demonstrate my audio engineering and more. Charlie Catura programmed the functions for the audio interface to properly play music.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/all.css">
+
+    <script src="javascript/javascript.js" defer></script>
+    <script src="javascript/audio.js" defer></script>
+    
+    <title>Melody Catura - Audio Production Portfolio</title>
+</head>
+
+<body>
+    <div id="top" class="container behind">
+        <div class="head">
+            <div class="title">
+                <img src="images/Birb.png" class="logo" draggable="false">
+                <h1 class="fancyTextTwo">Melody Catura</h1>
+                <h2 class="fancyText">Audio Production Portfolio</h2>
+            </div><!-- End Title -->
+
+            <div class="nav">
+                <a href="index.html" id="aboutButton" target="_self">About</a> <span class="dot"></span>
+                <a href="projects.html" id="audioVideoButton" target="_self">Projects</a><span class="dot"></span>
+                <a href="social.html" alt="Social Media" target="_self">Social Media</a>
+            </div><!-- End Navigation -->
+        </div><!-- End Header -->
+
+        <div class="row">
+            <div id="Soundcloud" class="card box">
+                <a href="https://soundcloud.com/mrcatura" alt="Soundcloud" target="_blank" class="social"><i class="fa-brands fa-soundcloud"></i></a>
+                <p>Soundcloud</p>
+            </div><!-- Soundcloud -->
+
+            <div id="Audius" class="card box">
+                <a href="https://audius.co/mrcatura" alt="Audius" target="_blank" class="social"><i class="fa-solid fa-music"></i></a>
+                <p>Audius</p>
+            </div><!-- Audius -->
+
+            <div id="Youtube" class="card box">
+                <a href="https://www.youtube.com/@Audio-Birb/featured" alt="Youtube" target="_blank" class="social"><i class="fa-brands fa-youtube"></i></a>
+                <p>Youtube</p>
+            </div><!-- Youtube -->
+            
+            <div id="Instagram" class="card box">
+                <a href="https://www.instagram.com/audio_birb/" alt="Instagram" target="_blank" class="social"><i class="fa-brands fa-instagram"></i></a>
+                <p>Instagram</p>
+            </div><!-- Instagram -->
+
+            <div id="Codepen" class="card box">
+                <a href="https://codepen.io/mrcatura"  alt="Codepen" target="_blank" class="social"><i class="fa-brands fa-codepen"></i></a>
+                <p>Codepen</p>
+            </div><!-- Codepen -->
+                   
+            <div id="Linkedin" class="card box">   
+                <a href="https://www.linkedin.com/in/melody-catura-065502191/" alt="Linkedin" target="_blank" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                <p>Linkedin</p>
+            </div><!-- Linkedin -->
+
+            <div id="Email" class="card box">
+                <a id="email" alt="Email" target="_self"><i class="fa-solid fa-envelope"></i></a>
+                <p>Email</p>
+            </div><!-- Email -->
+        </div><!-- End Row Container -->
+
+        <div class="foot">
+            <div id="location" class="socialContainer">
+                <a href="https://www.google.com/maps/place/Knoxville,+TN/@35.9580112,-84.2547304,10z/data=!3m1!4b1!4m6!3m5!1s0x885c162246ce42a9:0x7bea92dac4f534c5!8m2!3d35.9606384!4d-83.9207392!16zL20vMF92bjc?entry=ttu" alt="Knoxville, TN" target="_blank" class="location">Knoxville, TN <i class="fa-solid fa-location-dot"></i></a>
+                
+                <span class="dot"></span>
+
+                <a href="https://www.linkedin.com/in/melody-catura-065502191/" alt="Linkedin" target="_blank" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                <a id="email" alt="Email" target="_self"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+            <div id="rights" class="rightsContainer">
+                <p>&copy; Copyright 2022-<a id="currentY"></a> Melody Catura. All Rights Reserved</p>
+            </div>
+    
+            <div id="credit" class="creditContainer">
+                <p>Credit to <a href="https://charliecatura.com/" alt="harliecatura.com" target="_blank">Charlie Catura</a> for programming this website.</p>
+            </div>
+    
+            </div><!-- End Footer -->
+    
+            <a id="returnButton" target="_self" class="return linear-wipe" alt="Back to Top"><i class="fa-solid fa-circle-up"></i></a>
+            
+        </div><!-- End Container -->
+    
+    <script>
+        var d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("currentY").innerHTML = year;
+
+        var audio = document.getElementsByClassName("volume");
+            audio.volume = 0.5;
+
+    </script><!-- End Year Script -->
+
+</body>
+</html>

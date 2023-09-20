@@ -19,6 +19,10 @@ body {
     margin:3% 0 3% 0;
 }
 
+.socialContainer .location {
+    font-size:1.9em;
+}
+
 h1 {
     margin:0;
 }
@@ -76,7 +80,7 @@ img {
     transition:.3s smooth;
 }
 
-.row, .rowAudioEng, .rowWebDev, .rowAbout {
+.row, .rowAudioEng, .rowSlideShow, .rowAbout {
     display:flex;
     flex-wrap:wrap;
     align-items: center;
@@ -92,20 +96,24 @@ img {
     align-content:center;
 }
 
-.rowWebDev {
+.rowSlideShow {
     flex-flow:column nowrap;
     align-content:center;
 }
 
 .rowAbout {
     justify-content: stretch;
-    
     align-content:center;
 }
 
 .row {
-    flex-flow:column wrap;
+    display:flex;
+    flex-flow:row wrap;
+    align-items: center;
+    justify-items:center;
     align-content:center;
+    justify-content: center;
+    gap:50px;
 }
 
 .imgMusicBirb {
@@ -270,7 +278,7 @@ img.picture {
     justify-content: center;
 }
 
-.socialContainer a {
+.socialContainer a, .card a {
     font-size:3em;
     margin:0 5px 0 5px;
     background:-webkit-linear-gradient(#a8d9ff, rgb(100, 100, 100));
@@ -315,6 +323,17 @@ img.picture {
     background-color:rgba(2,2,2,.5);
     box-shadow: inset 0 0 10px 8px rgba(0, 0, 0, .5);
     border-image: linear-gradient(to bottom, #000000, #00a6ff,#000000) 1;
+}
+
+.card {
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    justify-content: center;
+    width:150px;
+    height:150px;
+    border:solid 1px black;
+    /*border-radius:8%;*/
 }
 
 .audioCard {
@@ -857,7 +876,7 @@ img.picture {
     transition:.2s;
 }
 
-.return:hover, .socialContainer a:hover, .creditContainer a:hover, .listAudioEng a:hover, .listWebDev a:hover, .arrow-left:hover, .arrow-right:hover, .active {
+.return:hover, .socialContainer a:hover, .card a:hover, .creditContainer a:hover, .listAudioEng a:hover, .listWebDev a:hover, .arrow-left:hover, .arrow-right:hover, .active {
     background:-webkit-linear-gradient(#57b6ff, rgb(5, 111, 205));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
