@@ -114,6 +114,7 @@ img {
     align-content:center;
     justify-content: center;
     gap:50px;
+    margin:0 15%;
 }
 
 .imgMusicBirb {
@@ -720,6 +721,10 @@ img.picture {
 
     .audioCard {
         width:100%;
+    }
+
+    .row {
+        margin:0;
     }
     
 }
