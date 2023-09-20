@@ -684,6 +684,10 @@ img.picture {
     .logo {
         display:none;
     }
+
+    .row {
+        margin:0 5%;
+    }
 }
 
 @media screen and (max-width:400px) {
