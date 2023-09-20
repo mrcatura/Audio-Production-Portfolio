@@ -137,6 +137,22 @@ img.imageFun:hover {
     animation-iteration-count: infinite;
 }
 
+.BubblesTL, .BubblesBR {
+    position: fixed;
+    max-width: 30%;
+    z-index: -1;
+    opacity:30%;
+}
+
+.BubblesTL {
+    top: -8em;
+    left: -10em;
+}
+
+.BubblesBR {
+    bottom: -18em;
+    right: -10em;
+}
 
 @keyframes vibrate {
     0% { transform: rotate(0deg); }
@@ -669,6 +685,16 @@ img.picture {
         width:50%;
         padding:3%;
     }
+
+    .BubblesTL {
+        top: -4em;
+        left: -5em;
+    }
+    
+    .BubblesBR {
+        bottom: -9em;
+        right: -5em;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -687,6 +713,16 @@ img.picture {
 
     .row {
         margin:0 5%;
+    }
+
+    .BubblesTL {
+        top: -2em;
+        left: -2em;
+    }
+    
+    .BubblesBR {
+        bottom: -5em;
+        right: -2em;
     }
 }
 
