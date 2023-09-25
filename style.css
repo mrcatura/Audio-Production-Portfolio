@@ -612,7 +612,11 @@ img.picture {
     font-weight: bold;
   }
 
-  #click-email-module {}
+  /* IDs associated with Email Form */
+    #click-email-module {}
+    #close-email-module {}
+    #send-email {}
+    #email-module {}
 
   .email {
     display: flex;
@@ -622,6 +626,12 @@ img.picture {
     cursor: pointer;
     font-weight: bold;
   }
+
+  .close-button {
+
+  }
+
+  
   
   @keyframes spin {
     from {
