@@ -666,11 +666,6 @@ img.picture {
         font-size:1rem;
     }
 
-    .foot {
-        text-align:center;
-        font-size:small;
-    }
-
     .title {
         flex-flow:column wrap;
     }
@@ -786,6 +781,7 @@ img.picture {
 
     .row {
         margin:0 5%;
+        gap:25px;
     }
 
     .BubblesTL {
@@ -801,6 +797,17 @@ img.picture {
     .email-module-window {
         width: 350px;
       }
+
+      .card {
+        width:120px;
+        height:120px;
+        font-size: small;
+    }
+
+    .foot {
+        text-align:center;
+        font-size:small;
+    }
       
 }
 
@@ -849,6 +856,21 @@ img.picture {
         width: 300px;
       }
     
+}
+
+@media screen and (max-width:335px) {
+    div.title h1 {
+        font-size:2rem;
+    }
+
+    div.title h2 {
+        font-size:1rem;
+    }
+
+    .foot {
+        text-align: center;
+        font-size:x-small;
+    }
 }
 
   /* Fancy Animations */
