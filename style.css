@@ -359,6 +359,13 @@ img.picture {
     justify-content: center;
 }
 
+.audioCardTitle {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
 .display video, .displayWebDev img {
     width:inherit;
     height:auto;
