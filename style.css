@@ -871,7 +871,7 @@ img.picture {
       
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:460px) {
     .display {
         width:100%;
         max-height:75%;
@@ -912,10 +912,14 @@ img.picture {
         margin:0;
     }
 
+    .card {
+        width:150px;
+        height:150px;
+    }
+
     .email-module-window {
         width: 300px;
       }
-    
 }
 
 @media screen and (max-width:395px) {
@@ -936,10 +940,6 @@ img.picture {
         margin:0;
     }
 
-    .card {
-        width:150px;
-        height:150px;
-    }
 }
 
   /* Fancy Animations */
