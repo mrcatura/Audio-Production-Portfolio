@@ -913,7 +913,7 @@ img.picture {
     }
 
     .card {
-        width:150px;
+        width:100%;
         height:150px;
     }
 
@@ -936,13 +936,6 @@ img.picture {
         font-size:x-small;
     }
 
-}
-
-@media screen and (max-width:333px) {
-    .card {
-        width:100%;
-        height:150px;
-    }
 }
 
   /* Fancy Animations */
