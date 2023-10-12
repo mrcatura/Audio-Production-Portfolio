@@ -932,6 +932,10 @@ img.picture {
         font-size:x-small;
     }
 
+    .row {
+        margin:0;
+    }
+
     .card {
         width:150px;
         height:150px;
