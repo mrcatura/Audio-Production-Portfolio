@@ -294,8 +294,17 @@ img.picture {
     justify-content: center;
 }
 
-.socialContainer a, .card a {
+.socialContainer a {
     font-size:3em;
+    margin:0 5px 0 5px;
+    background:-webkit-linear-gradient(#a8d9ff, rgb(100, 100, 100));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition:.2s;
+}
+
+.card a {
+    font-size:4em;
     margin:0 5px 0 5px;
     background:-webkit-linear-gradient(#a8d9ff, rgb(100, 100, 100));
     -webkit-background-clip: text;
@@ -346,10 +355,16 @@ img.picture {
     flex-flow:column wrap;
     align-items: center;
     justify-content: center;
-    width:150px;
-    height:150px;
+    width:200px;
+    height:200px;
     border:solid 1px black;
+    font-size: medium;
     /*border-radius:8%;*/
+}
+
+.card:hover {
+    box-shadow:1px 1px 10px rgba(0, 251, 255, 0.753);
+    transition: .5s;
 }
 
 .audioCard {
@@ -772,6 +787,18 @@ img.picture {
     }
 }
 
+@media screen and (max-width:1200px) {
+      .card {
+        width:150px;
+        height:150px;
+    }
+
+    .card a {
+        font-size: 3em;
+    }
+      
+}
+
 @media screen and (max-width:600px) {
     .display {
         width:100%;
@@ -808,7 +835,10 @@ img.picture {
       .card {
         width:120px;
         height:120px;
-        font-size: small;
+    }
+    
+    .card a {
+        font-size: 2.5em;
     }
 
     .foot {
