@@ -361,10 +361,10 @@ img.picture {
     flex-flow:column wrap;
     align-items: center;
     justify-content: center;
-    width:240px;
-    height:240px;
+    width:270px;
+    height:270px;
     border:solid 1px black;
-    font-size: medium;
+    font-size: larger;
     transition:.5s;
     /*border-radius:8%;*/
 }
