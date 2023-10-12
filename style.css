@@ -237,10 +237,12 @@ h3, h5, .time p, ul, li {
 
 div.title h1{
     font-size:4rem;
+    transition: .5s;
 } 
 
 div.title h2 {
     font-size:2rem;
+    transition: .5s;
 }
 
 div.nav a {
