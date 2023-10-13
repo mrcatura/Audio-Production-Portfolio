@@ -237,6 +237,7 @@ h3, h5, .time p, ul, li {
 
 .title {
     flex-flow: column wrap;
+    pointer-events: none;
 }
 
 div.title h1{
