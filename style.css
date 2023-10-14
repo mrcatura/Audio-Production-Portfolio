@@ -146,6 +146,7 @@ img.imageFun:hover {
     max-width: 30%;
     z-index: -1;
     opacity:30%;
+    transition:.3s;
 }
 
 .BubblesTL {
