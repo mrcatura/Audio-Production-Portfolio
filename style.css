@@ -159,6 +159,21 @@ img.imageFun:hover {
     right: -10em;
 }
 
+.Bird {
+    position: fixed;
+    z-index: 5;
+    margin: auto;
+    bottom:0;
+    right:0;
+    height:20%;
+    opacity: 2%;
+    pointer-events: all;
+}
+.Bird:hover {
+    opacity: 100%;;
+    transition:.4s;
+}
+
 @keyframes vibrate {
     0% { transform: rotate(0deg); }
     10% { transform: rotate(-2deg); }
