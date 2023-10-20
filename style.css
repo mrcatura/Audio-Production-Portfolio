@@ -8,8 +8,14 @@ body {
     background:linear-gradient(315deg, rgba(2, 0, 5, 1) 0%, rgba(25, 34, 40,1) 50%, rgba(0, 0, 0, 1) 100%) no-repeat fixed;
 }
 
+b {
+    text-decoration: underline;
+}
+
 .Line {
-    margin:5% 0 5% 0;
+    width:96%;
+    margin:auto;
+    border:solid 1px rgb(0, 66, 107);
 }
 
 .headphones {
@@ -286,6 +292,7 @@ div.nav a {
     justify-content: center;
     flex:70%;
     height: 100vh;
+    line-height:2.1em;
 }
 div.aboutDescription p a {
     color:cyan;
@@ -349,6 +356,8 @@ img.picture {
 .displayDescription {
     width:75%;
     max-height:75%;
+    overflow:scroll;
+    overflow-x:hidden;
 }
 
 .displayWebDev {
