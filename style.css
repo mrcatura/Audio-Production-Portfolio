@@ -2,10 +2,19 @@
 
 body {
     margin:auto;
-    height:100vh;
+    min-height:100vh;
     font-family:arial;
     color:#ebebeb;
     background:linear-gradient(315deg, rgba(2, 0, 5, 1) 0%, rgba(25, 34, 40,1) 50%, rgba(0, 0, 0, 1) 100%) no-repeat fixed;
+}
+
+.overflow {
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+div h5 i {
+    color:red;
 }
 
 b {
@@ -90,25 +99,12 @@ img {
     transition:.3s smooth;
 }
 
-.row, .rowAudioEng, .rowSlideShow, .rowAbout {
+.row, .rowAbout {
     display:flex;
     flex-wrap:wrap;
     align-items: center;
     justify-content: center;
-    /*width:80vw;*/
-    /*padding:0 10% 0 10%;*/
-    height:100vh;
-}
-
-.rowAudioEng {
-    justify-content: stretch;
-    flex-flow:column;
-    align-content:center;
-}
-
-.rowSlideShow {
-    flex-flow:column nowrap;
-    align-content:center;
+    min-height:100vh;
 }
 
 .rowAbout {
@@ -194,18 +190,10 @@ img.imageFun:hover {
     100% { transform: rotate(-2deg); }
   }
 
-.audioMusic {
-    border-radius:5px;
-}
-
-div.audioMusic audio {
+div.audioCard audio {
     width:90%;
     height:35px;
     padding-bottom:8px;
-}
-
-.audioMusic:hover {
-    background: linear-gradient(to right, rgb(0, 56, 123), rgba(0,0,0,0));
 }
 
 audio::-webkit-media-panel {
@@ -291,17 +279,13 @@ div.nav a {
     align-items:center;
     justify-content: center;
     flex:70%;
-    height: 100vh;
+    min-height: 100vh;
     line-height:2.1em;
 }
 div.aboutDescription p a {
     color:cyan;
     text-decoration:none;
 }
-
-/*.aboutDescription p {
-    width:80%;
-}*/
 
 img.picture {
     width:inherit;
@@ -322,6 +306,7 @@ img.picture {
     flex:auto;
     align-items:center;
     justify-content: center;
+    min-height:50vh;
 }
 
 .socialContainer a {
@@ -355,9 +340,6 @@ img.picture {
 
 .displayDescription {
     width:75%;
-    max-height:75%;
-    overflow:scroll;
-    overflow-x:hidden;
 }
 
 .displayWebDev {
@@ -395,23 +377,51 @@ img.picture {
     /*border-radius:8%;*/
 }
 
-.card:hover {
+.card:hover, .audioCard:hover  {
     box-shadow:1px 1px 10px rgba(0, 251, 255, 0.753);
     transition: .5s;
 }
 
-.audioCard {
+.rowAudio {
     display:flex;
     flex-flow:row wrap;
     align-items: center;
+    justify-items:center;
+    align-content:center;
     justify-content: center;
+    gap:25px;
+    margin-bottom:25px;
 }
 
-.audioCardTitle {
+.audioCard {
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    align-content:center;
+    justify-content:center;
+    width:270px;
+    height:270px;
+    gap: 8%;
+    border-radius:5px;
+}
+
+div.audioCard p {
     display:flex;
     align-items: center;
     justify-content: center;
     width:100%;
+    font-size:.9em;
+}
+
+.audioCardTitle{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+
+div.audioCardTitle h4{
+    font-size:1.2em;
 }
 
 .display video, .displayWebDev img {
@@ -494,13 +504,6 @@ img.picture {
 }
 
 .mediaFont:hover {
-    background:-webkit-linear-gradient(#57b6ff, rgb(5, 111, 205));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition:.2s;
-}
-
-.audioMusic:hover .playerButtons i, .audioMusic:hover i {
     background:-webkit-linear-gradient(#57b6ff, rgb(5, 111, 205));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -730,22 +733,13 @@ img.picture {
         width:100%;
     }
 
-    .audioMusic {
+    .audioCard {
         display:flex;
         align-items:center;
-        width:100%;
-        height:100px;
         font-size:.8em;
         border-radius:5px;
         box-shadow:inset 0 15px 20px 10px rgb(0 0 0 / 30%);
     }
-
-    .displayDescription{
-        width:75%;
-        overflow:scroll;
-        overflow-x:hidden;
-        max-height:75%;
-    }   
 
     .display {
         flex:100%;
@@ -766,12 +760,10 @@ img.picture {
 
     .profilePicture {
         width:100%;
-        height:45%;
     }
 
     .aboutDescription {
         width:100%;
-        height:55%;
     }
 
     .aboutDescription p {
@@ -853,8 +845,11 @@ img.picture {
         width:170px;
         height:170px;
     }
-}
 
+    .row {
+        margin:0;
+    }
+}
 
 @media screen and (max-width:600px) {
     .display {
@@ -1160,19 +1155,19 @@ div.nav a:hover {
 }
 
 ::-webkit-scrollbar-track-piece {
-  background-color: rgba(255, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 ::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
   border-radius:25px;
-  box-shadow:inset 0 0 8px 5px rgba(0,0,0,.5);
+  box-shadow:inset 0 0 8px 5px rgba(0,0,0,0);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgb(187, 187, 187);
+  background-color: rgba(0, 0, 0,0);
   border-radius:25px;
-  box-shadow: 0 0 15px 5px rgba(0,0,0,.5);
+  box-shadow: 0 0 15px 5px rgba(0,0,0,0);
 }
 
 ::-webkit-scrollbar-corner {

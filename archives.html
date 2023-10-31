@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="About, Melody Catura, Melody Rose Catura, Charlie Catura, Portfolio, Audio Production Engineering, Audio Production, Audio, Music, Sound, FL-Studio User, Ableton Live User, Pro-Tools User">
+    <meta name="author" content="Melody Catura">
+    <meta name="description" content="This portfolio was created to demonstrate my audio engineering and more. Charlie Catura programmed the functions for the audio interface to properly play music.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/all.css">
+
+    <script src="javascript/javascript.js" defer></script>
+    <script src="javascript/audio.js" defer></script>
+    
+    <title>Melody Catura - Audio Production Portfolio</title>
+</head>
+
+<body>
+
+    <img src="SVGs/Bubbles - TL.svg" class="BubblesTL">
+    <img src="images/Cockatiel2.png" class="Bird">
+    <img src="SVGs/Bubbles - BR.svg" class="BubblesBR">
+
+    <div id="top" class="container behind">
+        <div class="head">
+            <div class="title">
+                <img src="images/Birb.png" class="logo" draggable="false">
+                <h1 class="fancyTextTwo">Melody Catura</h1>
+                <h2 class="fancyText">Audio Production Engineer</h2>
+            </div><!-- End Title -->
+
+            <div class="nav">
+                <a href="index.html" id="aboutButton" target="_self">About</a> <span class="dot"></span>
+                <a href="projects.html" id="audioVideoButton" target="_self">Projects</a><span class="dot"></span>
+                <a href="social.html" alt="Social Media" target="_self">Social Media</a><!--<span class="dot"></span>
+                <a href="archives.html" id="archivesButton" target="_self">Archives</a>-->
+            </div><!-- End Navigation -->
+        </div><!-- End Header -->
+
+        <div class="row">
+            <!--<div class="display">
+                
+            </div> End Display -->
+            <div class="headphones">
+                <div><h4 class="fancyText"><i>*** Recommend using headphones ***</i></h4></div>
+                <div><h5 class="fancyText"><i>*** Pause previous track before playing another. ***</i></h5></div>
+            </div><!-- End Project Card -->
+
+                <!--<div class="imgMusicBirb">
+                        <img src="images/Cyan.png" class="imageFun" draggable="false">
+                </div> End Project Card -->
+
+                <div class="rowAudio overflow">
+                    <div id="" class="audioCard box ">
+                        <div class="audioCardTitle"><h4>It's Just an Illusion | 2012</h4></div>
+                        <div><p>DAW Used: Cakewalk Studio</div>
+                        <audio controls controlslist="nodownload noplaybackrate" class="volume">
+                            <source src="audio/.wav" type="audio/wav">
+                        </audio>
+                        <div><p>Update: ?????</p></div>
+                    </div><!-- Audio -->
+
+                    
+
+                    <div id="" class="audioCard box ">
+                        <div class="audioCardTitle"><h4>Battle Theme 2 | 2013</h4></div>
+                        <div><p>DAW Used: Cakewalk Studio</p></div>
+                        <audio controls controlslist="nodownload noplaybackrate" class="volume">
+                            <source src="audio/.wav" type="audio/wav">
+                        </audio>
+                        <div><p>Update: 1.4</p></div>
+                    </div><!-- Audio -->
+            </div><!-- End Row -->
+        </div><!-- End Row -->
+
+        <div class="foot">
+
+            <div id="location" class="socialContainer">
+                <a href="https://www.google.com/maps/place/Knoxville,+TN/@35.9580112,-84.2547304,10z/data=!3m1!4b1!4m6!3m5!1s0x885c162246ce42a9:0x7bea92dac4f534c5!8m2!3d35.9606384!4d-83.9207392!16zL20vMF92bjc?entry=ttu" alt="Knoxville, TN" target="_blank" class="location">Knoxville, TN <i class="fa-solid fa-location-dot"></i></a>
+                
+                <span class="dot"></span>
+
+                <a href="https://www.linkedin.com/in/melody-catura-065502191/" alt="Linkedin" target="_blank" class="social"><i class="fa-brands fa-linkedin"></i></a>
+                <a class="email" id="click-email-module" alt="Email" target="_self"><i class="fa-solid fa-envelope"></i></a><!-- Email Button Right Here -->
+            </div>
+
+            <div id="rights" class="rightsContainer">
+                <p>&copy; Copyright 2022-<a id="currentY"></a> Melody Catura. All Rights Reserved.</p>
+            </div>
+    
+            <div id="credit" class="creditContainer">
+                <p>Credit to <a href="https://charliecatura.com/" alt="harliecatura.com" target="_blank">Charlie Catura</a> for programming this website.</p>
+            </div>
+    
+            </div><!-- End Footer -->
+
+            <form target="_blank" method="post" action="./email.php">
+                <input type="hidden" name="subject" value="Email from Portfolio Page">
+                <input type="hidden" name="good-to-go" value="false">
+                <div class="email-module-container show-hide" id="email-module">
+                    <div class="email-module-window box3">
+                        <div class="email-module-title-bar"><p>Email Me</p><p class="close-button" title="Close" id="close-email-module">✕</p></div>
+                        <p>Name</p>
+                        <input type="text" name="name" placeholder="Your Name" required="">
+                        <p>Email</p>
+                        <input type="email" name="email" placeholder="Your Email Address" required="">
+                        <p>Message</p>
+                        <textarea name="message" placeholder="Your message here." required=""></textarea>
+                        <div class="email-module-buttons">
+                            <div style="text-align:center;">Before sending, uncheck this box.<br><input type="checkbox" id="good-to-go" checked=""></div>
+                            <input id="send-email" type="submit" name="submit" value="Send" style="font-size:20px;padding:5px;margin-top:5px;" disabled="">
+                        </div><!-- Email Button -->
+                    </div><!-- Email Window -->
+                </div><!-- End Container -->
+            </form><!-- End Form --> 
+
+        </div><!-- End Container -->
+    
+    <script>
+        var d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("currentY").innerHTML = year;
+
+        var audio = document.getElementsByClassName("volume");
+            audio.volume = 0.5;
+
+    </script><!-- End Year Script -->
+
+</body>
+</html>
