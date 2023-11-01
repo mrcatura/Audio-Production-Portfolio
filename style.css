@@ -31,8 +31,19 @@ b {
     display:flex;
     flex-flow: column wrap;
     align-items:center;
-    margin:3% 0 3% 0;
+    gap:8px;
 }
+
+.archiveHeader {
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.archiveHeader p {
+    margin:0;
+}
+
 
 .socialContainer .location {
     font-size:1.9em;
