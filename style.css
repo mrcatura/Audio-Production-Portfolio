@@ -32,6 +32,7 @@ b {
     flex-flow: column wrap;
     align-items:center;
     gap:8px;
+    margin-top:2em;
 }
 
 .archiveHeader {
@@ -401,7 +402,7 @@ img.picture {
     align-content:center;
     justify-content: center;
     gap:25px;
-    margin-bottom:25px;
+    margin-bottom:2em;
 }
 
 .audioCard {
