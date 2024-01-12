@@ -173,19 +173,20 @@ img.imageFun:hover {
     right: -10em;
 }
 
-.Bird {
+.BRicon {
     position: fixed;
     z-index: 5;
     margin: auto;
     bottom:0;
     right:0;
-    height:20%;
+    height:30%;
     opacity: 2%;
     pointer-events: all;
+    transition:.6s;
 }
-.Bird:hover {
+.BRicon:hover {
     opacity: 100%;;
-    transition:.4s;
+    transition:.6s;
 }
 
 @keyframes vibrate {
@@ -1192,7 +1193,7 @@ div.nav a:hover {
     max-height:13%;
     position:absolute;
     left:0;
-    top:10.2%;
+    transition:.5s;
 }
 
 /* Slideshow container */
